@@ -1,0 +1,23 @@
+{
+  "name": "practice_imjp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HisadaNaojiro/practice_imjp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HisadaNaojiro/practice_imjp/issues"
+  },
+  "homepage": "https://github.com/HisadaNaojiro/practice_imjp#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
