@@ -1,0 +1,17 @@
+@mixin rem($property, $values) {
+  $rem: ();
+
+  @each $value in $values {
+    @if $value == 0 or $value == auto {
+      $rem: append($rem, $value);
+    } @else {
+      $unit: unit($value);
+      $val: parseInt($value);
+
+      @if $unit == "px" {
+        $rem: append($rem, ($val / 14 + rem));
+      }
+    }
+  }
+  #{$property}: $rem;
+}
