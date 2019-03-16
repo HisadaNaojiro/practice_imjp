@@ -1,0 +1,38 @@
+.st {
+    font-size: 128px;
+}
+
+.st:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../img/structures/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 1.15625em 2.3125em;
+}
+
+.no-svg .st:before {
+    background-image: url(".././src/assets/img/structures/sprite.png");
+}
+
+
+
+  .st.contact:before {
+      background-position: -0.078125em -0.078125em;
+      width: 1em;
+      height: 1em;
+  }
+
+
+
+
+  .st.search:before {
+      background-position: -0.078125em -1.234375em;
+      width: 1em;
+      height: 1em;
+  }
+
+
+
+
+

@@ -422,3 +422,143 @@ textarea {
   font: inherit;
   /* 2 */
 }
+
+/* st-header */
+.st-header {
+  background: #000;
+  padding-top: 2.78571rem;
+  border-bottom: 1px solid #ccc;
+}
+
+@media screen and (max-width: 800px) {
+  .st-header {
+    padding-top: 10px;
+  }
+}
+
+.st-header__content {
+  background: #fff;
+}
+
+.st-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__inner {
+    height: 3.57143rem;
+  }
+}
+
+.st-header__infoNav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -2.78571rem;
+  right: 15px;
+  height: 2.78571rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.st-header__infoNav > li {
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__infoNav {
+    display: block;
+    position: static;
+    right: auto;
+    height: auto;
+  }
+  .st-header__infoNav > li {
+    padding-left: 0;
+  }
+}
+
+.st-header__logo {
+  margin: 0;
+}
+
+.st-header__logo__img {
+  display: block;
+  width: 110px;
+  height: 58px;
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__logo__img {
+    width: 55px;
+    height: auto;
+  }
+}
+
+.st-header__navBtn {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__navBtn {
+    align-self: stretch;
+    display: block;
+    cursor: pointer;
+    border-radius: 0;
+    appearance: button;
+    border: none;
+    padding: 0;
+    background: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__navBtn__icon {
+    position: relative;
+    display: block;
+    background-color: #000;
+    transition: background-color 0.1s liner;
+  }
+  .st-header__navBtn__icon::before, .st-header__navBtn__icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 17px;
+    height: 2px;
+    background-color: #000;
+    transition: transform 0.2s liner;
+  }
+  .st-header__navBtn__icon::before {
+    top: -5px;
+  }
+  .st-header__navBtn__icon::after {
+    top: 5px;
+  }
+  .st-header__navBtn__icon.is-nav-open {
+    background-color: transparent;
+  }
+  .st-header__navBtn__icon.is-nav-open::before {
+    top: 50%;
+    transform: rotate(-135deg);
+  }
+  .st-header__navBtn__icon.is-nav-open::after {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__nav {
+    position: absolute;
+    top: 3.64286rem;
+    left: 0;
+    width: 100%;
+  }
+}

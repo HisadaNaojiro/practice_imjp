@@ -1,0 +1,74 @@
+.c {
+    font-size: 128px;
+}
+
+.c:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../img/contents/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 1.40625em 6.9375em;
+}
+
+.no-svg .c:before {
+    background-image: url(".././src/assets/img/contents/sprite.png");
+}
+
+
+
+  .c.arrow-circle-red:before {
+      background-position: -0.078125em -0.078125em;
+      width: 1em;
+      height: 1em;
+  }
+
+
+
+
+  .c.chevron-red:before {
+      background-position: -0.078125em -1.234375em;
+      width: 0.640625em;
+      height: 1em;
+  }
+
+
+
+
+  .c.chevron-white:before {
+      background-position: -0.078125em -2.390625em;
+      width: 0.640625em;
+      height: 1em;
+  }
+
+
+
+
+  .c.external-gray:before {
+      background-position: -0.078125em -3.546875em;
+      width: 1.25em;
+      height: 1em;
+  }
+
+
+
+
+  .c.external-white:before {
+      background-position: -0.078125em -4.703125em;
+      width: 1.25em;
+      height: 1em;
+  }
+
+
+
+
+  .c.facebook:before {
+      background-position: -0.078125em -5.859375em;
+      width: 0.515625em;
+      height: 1em;
+  }
+
+
+
+
+
