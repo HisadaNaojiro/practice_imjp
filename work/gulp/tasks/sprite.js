@@ -20,5 +20,5 @@ var spriteConfig = {
 gulp.task('sprites', function() {
   return gulp.src(config.sprite + '/' + options.dir + '/*.svg')
     .pipe(svgSprite(spriteConfig))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./'));
 });
