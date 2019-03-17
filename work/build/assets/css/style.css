@@ -1,4 +1,86 @@
 @charset "UTF-8";
+.c {
+  font-size: 128px;
+}
+
+.c:before {
+  content: ' ';
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url("../img/contents/sprite.svg");
+  background-repeat: no-repeat;
+  background-size: 1.40625em 6.9375em;
+}
+
+.no-svg .c:before {
+  background-image: url(".././src/assets/img/contents/sprite.png");
+}
+
+.c.arrow-circle-red:before {
+  background-position: -0.078125em -0.078125em;
+  width: 1em;
+  height: 1em;
+}
+
+.c.chevron-red:before {
+  background-position: -0.078125em -1.234375em;
+  width: 0.640625em;
+  height: 1em;
+}
+
+.c.chevron-white:before {
+  background-position: -0.078125em -2.390625em;
+  width: 0.640625em;
+  height: 1em;
+}
+
+.c.external-gray:before {
+  background-position: -0.078125em -3.546875em;
+  width: 1.25em;
+  height: 1em;
+}
+
+.c.external-white:before {
+  background-position: -0.078125em -4.703125em;
+  width: 1.25em;
+  height: 1em;
+}
+
+.c.facebook:before {
+  background-position: -0.078125em -5.859375em;
+  width: 0.515625em;
+  height: 1em;
+}
+
+.st {
+  font-size: 128px;
+}
+
+.st:before {
+  content: ' ';
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url("../img/structures/sprite.svg");
+  background-repeat: no-repeat;
+  background-size: 1.15625em 2.3125em;
+}
+
+.no-svg .st:before {
+  background-image: url(".././src/assets/img/structures/sprite.png");
+}
+
+.st.contact:before {
+  background-position: -0.078125em -0.078125em;
+  width: 1em;
+  height: 1em;
+}
+
+.st.search:before {
+  background-position: -0.078125em -1.234375em;
+  width: 1em;
+  height: 1em;
+}
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -116,7 +198,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -243,7 +326,8 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -344,7 +428,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -371,7 +456,8 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -421,4 +507,169 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */
+}
+
+/* st-header */
+.st-header {
+  background: #000;
+  padding-top: 2.78571rem;
+  border-bottom: 1px solid #ccc;
+}
+
+@media screen and (max-width: 800px) {
+  .st-header {
+    padding-top: 10px;
+  }
+}
+
+.st-header__content {
+  background: #fff;
+}
+
+.st-header__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__inner {
+    height: 3.57143rem;
+  }
+}
+
+.st-header__infoNav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -2.78571rem;
+  right: 15px;
+  height: 2.78571rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.st-header__infoNav > li {
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__infoNav {
+    display: block;
+    position: static;
+    right: auto;
+    height: auto;
+  }
+  .st-header__infoNav > li {
+    padding-left: 0;
+  }
+}
+
+.st-header__logo {
+  margin: 0;
+}
+
+.st-header__logo__img {
+  display: block;
+  width: 110px;
+  height: 58px;
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__logo__img {
+    width: 55px;
+    height: auto;
+  }
+}
+
+.st-header__navBtn {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__navBtn {
+    -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+            align-self: stretch;
+    display: block;
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-appearance: button;
+       -moz-appearance: button;
+            appearance: button;
+    border: none;
+    padding: 0;
+    background: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__navBtn__icon {
+    position: relative;
+    display: block;
+    background-color: #000;
+    -webkit-transition: background-color 0.1s liner;
+    transition: background-color 0.1s liner;
+  }
+  .st-header__navBtn__icon::before, .st-header__navBtn__icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 17px;
+    height: 2px;
+    background-color: #000;
+    -webkit-transition: -webkit-transform 0.2s liner;
+    transition: -webkit-transform 0.2s liner;
+    transition: transform 0.2s liner;
+    transition: transform 0.2s liner, -webkit-transform 0.2s liner;
+  }
+  .st-header__navBtn__icon::before {
+    top: -5px;
+  }
+  .st-header__navBtn__icon::after {
+    top: 5px;
+  }
+  .st-header__navBtn__icon.is-nav-open {
+    background-color: transparent;
+  }
+  .st-header__navBtn__icon.is-nav-open::before {
+    top: 50%;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+  }
+  .st-header__navBtn__icon.is-nav-open::after {
+    top: 50%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .st-header__nav {
+    position: absolute;
+    top: 3.64286rem;
+    left: 0;
+    width: 100%;
+  }
 }
