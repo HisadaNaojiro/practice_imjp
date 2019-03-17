@@ -136,3 +136,100 @@ $_header-md-innerHeight: 50px;
     width: 100%;
   }
 }
+
+// st-header__english
+%st-header__english {
+  @include rem(font-size, 13px);
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin: 0;
+  @include max-screen($BREAK_POINT_MD) {
+    @include rem(font-size, 15px);
+    @include rem(height, 54px);
+    display: flex;
+    align-items: center;
+    background: #000;
+    border-bottom: 1px solid #404040;
+    padding: 0 15px;
+  }
+};
+
+.st-header__english {
+  @extend %st-header__english;
+}
+
+// st-header__contact
+.st-header__contact {
+  @extend %st-header__english;
+  &::before { 
+    @include st-i-contact(26px);
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  @include max-screen($BREAK_POINT_MD) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+// st-header__search
+%st-header__searchIcon {
+  @include st-i-search(20px);
+  vertical-align: middle;
+}
+
+.st-header__search {
+  &::hover {
+    cursor: pointer;
+  }
+  &::before {
+    @extend %st-header__searchIcon;
+  }
+  &[aria-expanded="true"] {
+    &::hover {
+      cursor: default;
+    }
+    &::before {
+      display: none;
+    }
+  }
+  @include max-screen($BREAK_POINT_MD) {
+    background: #000;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.st-header__search__form {
+  display: none;
+  &.is-search-open {
+    display: flex;
+  }
+  @include max-screen($BREAK_POINT_MD) {
+    @include rem(height, 54px);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+}
+
+.st-header__search__input {
+  width: 100%;
+  margin-right: 15px;
+}
+
+.st-header__search__button {
+  border-radius: 0;
+  padding: 0;
+  appearance: button;
+  background: none;
+  border: none;
+  &::before {
+    @extend %st-header__searchIcon;
+  }
+}
+
+
