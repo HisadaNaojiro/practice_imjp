@@ -5,6 +5,8 @@ $_header-md-innerHeight: 50px;
 
 /* st-header */
 .st-header {
+  position: relative;
+  z-index: $Z_ST_HEADER;;
   background: #000;
   padding-top: rem($_header-topHeight);
   border-bottom: 1px solid #ccc;
@@ -60,6 +62,10 @@ $_header-md-innerHeight: 50px;
 // st-header__logo
 .st-header__logo {
   margin: 0;
+  flex-grow: 1;
+  @include max-screen($BREAK_POINT_MD) {
+    flex-grow: 0;
+  }
 }
 
 .st-header__logo__img {
@@ -129,7 +135,10 @@ $_header-md-innerHeight: 50px;
 
 // st-header__nav
 .st-header__nav {
+  flex-grow: 3;
   @include max-screen($BREAK_POINT_MD) {
+    flex-grow: 0;
+    display: none;
     position: absolute;
     top: rem($_header-md-innerHeight + 1);
     left: 0;
@@ -232,4 +241,41 @@ $_header-md-innerHeight: 50px;
   }
 }
 
+// st-header__globalNav
+.st-header__globalNav {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  > li {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.5s linear;
+    &:hover {
+      background-color: #e4e4e4;
+    }
+  }
+  @include max-screen($BREAK_POINT_MD) {
+    display: block;
+    > li {
+      display: block;
+    }
+  }
+}
 
+.st-header__globalNav__link {
+  @include rem(height, 108px);
+  display: flex;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  @include max-screen($BREAK_POINT_MD) {
+    @include rem(font-size, 15px);
+    @include rem(height, 54px);
+    background: #efefef;
+    padding: 0 15px;
+    border-bottom: 1px solid #ccc;
+  }
+}
